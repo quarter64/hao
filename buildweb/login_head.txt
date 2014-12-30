@@ -1,0 +1,56 @@
+﻿<%@ include file="browser.txt"%>
+<style type="text/css">
+body {font-family:Microsoft YaHei;}
+</style>
+<div style="position:absolute;left:0px;top:0px;height:70px;width:100%;background-color:#6fc670;color:#eaf5df;font-size:0.9em;">
+<style type="text/css">
+a:link,a:visited
+{
+	text-decoration:none;  /*超链接无下划线*/
+	color:#eaf5df;
+	font-size:0.75em;
+}
+a:hover
+{
+	text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+</style>	
+<TABLE border="0" width="100%">
+	<tr>
+		<td width="20%">
+			<table width="125" border="0">
+			  <tr>
+				<td width="25"><img width="25" height="30" src="WEB/images/register.png"></td>
+				<td><a href="register.jsp	">免费注册</a></td>
+			  </tr>
+			  <tr>
+				<td><img width="25" height="30" src="WEB/images/login.png"></td>
+				<td><a href="login.jsp">登录</a></td>
+			  </tr>
+			</table>
+		</td>
+		<td>
+			<table width="500" border="0" style="position:relative;left:50px;">
+  				<tr>
+   					<td><font  face="华文行楷" color="#eaf5df" size="+4">转易网<font size="-4" color="#000000">-----专注于商品信息分享!</font></font></td>
+  				</tr>
+			</table>
+		</td>
+		<td width="20%">
+			<table width="110" border="0" style="position:relative;left:30px;">
+  				<tr>
+					<td><img width="25" height="25" src="WEB/images/index.png"></td>
+   					<td bgcolor="#286426" align="center"><font  size="+1" color="#eaf5df"><a href="index.jsp">首页</a></font></td>
+  				</tr>
+				 <tr>
+				 	<td><img width="25" height="25" src="WEB/images/i.png"></td>
+   					<td bgcolor="#286426" align="center"><font  size="+1" color="#eaf5df"><a href="buygoods.jsp">我的主页</a></font></td>
+  				</tr>
+			</table>
+		</td>
+	</tr>
+</TABLE>
+</div>
+
+
+

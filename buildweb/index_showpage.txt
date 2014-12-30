@@ -1,0 +1,120 @@
+﻿<%String str=response.encodeURL("index.jsp");
+%>
+</div>
+<div style="position:relative;bottom:0px;left:-8px;right:0px;bottom:0px;">
+<style type="text/css">  
+#sharppage {
+list-style: none;
+display: inline;
+}
+#sharppage li {
+display: inline;
+margin-right: 5px;
+float: left;
+height: 20px;
+width: 20px;
+}
+#sharppage a {
+color: #399;
+text-decoration: none;
+display: block;
+font-size: 14px;
+font-family: Geneva, Arial, Helvetica, sans-serif;
+border: 1px solid #999;
+width: 20px;
+height: 20px;
+line-height: 20px;
+text-align: center;
+}
+#sharppage li a:hover {
+font-size: 24px;
+line-height: 30px;
+height: 30px;
+width: 30px;
+position: absolute;
+z-index: 10;
+margin: -5px 0 0 -5px;
+font-weight: bold;
+color: #CC66FF;
+border: 1px dotted #666666;
+background: #EEE;
+}
+</style>
+<table border='0'>
+	<tr height="10">
+		<td>
+			<Form action="<%=str%>" method="post" >
+			<Input Type="hidden" name="page" value="<%=nowpage-1%>">
+			<input type="submit" value="上一页" name="g" style="font-family:微软雅黑;font-size:1.0em;border:none;width:63px;height:30px;color:#2F580A;background:#8FB262">
+			</Form>
+		</td>
+		<td align="center">
+			<ul id="sharppage">
+			<%
+			
+			int showpage = nowpage;//当前显示多少页
+			if(showpage<=4)
+			{
+				for(int i=1;i<=4;i++)
+				{
+					if(i > handlePage.getPageCount())//handlePage.getPageCount 总共多少页
+					{
+						break;
+					}
+					if(showpage == i)
+					{
+						out.print("<li style='height:20px;text-align:center;width:20px;color:#FFFFFF;border:1px;background:#aaaaaa;'>"+i+"</li>");
+					}
+					else
+					{
+						out.print("<li><a href='index.jsp?page="+i+"'>"+i+"</a></li>");
+					}
+				}
+			}
+			else
+			{
+				int startpage = showpage-3;
+				int endpage = startpage+6;
+				for(int i=startpage;i<=endpage;i++)
+				{
+					if(i > handlePage.getPageCount())
+					{
+						break;
+					}
+					if(i == showpage)
+					{
+						out.print("<li style='height:20px;text-align:center;width:20px;color:#FFFFFF;border:1px;background:#aaaaaa;'>"+i+"</li>");
+					}
+					else
+					{
+						out.print("<li><a href='index.jsp?page="+i+"'>"+i+"</a></li>");
+					}
+				}
+			}
+			%>
+			<li>...</li>
+			</ul>
+		</td>
+		<td>
+			<Form action="<%=str%>" method="post" >
+			<Input Type="hidden" name="page" value="<%=nowpage+1%>">
+			<input type="submit" value="下一页" name="g" style="font-family:微软雅黑;font-size:1.0em;border:none;width:63px;height:30px;color:#2F580A;background:#8FB262">
+			</FORM>
+		</td>
+		</tr>
+		<tr>
+		<td valign='top'>
+		我要去到
+		</td>
+		<td valign='top'>
+			<Form action="<%=str%>" method="post" >
+			<Input type="text" name="page" value="1" size="3">
+			<input type="submit" value="GO!" name="g" style="font-family:微软雅黑;font-size:1.0em;border:none;width:40px;height:25px;color:#2F580A;background:#8FB262">
+			</FORM>
+		</td>
+		<td valign='top'>
+		共有<%=handlePage.getPageCount()%>页
+		</td>
+	</tr>
+</table>
+</div>

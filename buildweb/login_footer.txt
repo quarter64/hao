@@ -1,0 +1,93 @@
+﻿<div style="position:relative;top:0px;left:-8px;right:0px;bottom:0px;height:220px;width:101.1%;background-color:#6fc670;color:#eaf5df;font-size:0.8em;">
+<style type="text/css">
+a:link,a:visited
+{
+	text-decoration:none;  /*超链接无下划线*/
+	color:#eaf5df;
+}
+a:hover
+{
+	text-decoration:underline;  /*鼠标放上去有下划线*/
+}
+</style>
+<TABLE border="0" width="100%">
+<tr>
+	<td vAlign="top">
+		<table width="200" border="0" style="position:relative;left:130px;">
+		  <tr>
+		    <td><font size="+1">网站</font>简介</td>
+		  </tr>
+		  <tr>
+		    <td>看中商品后直接与商品所有者<font face="Bradley Hand ITC">GG/MM</font>联系,你我他/她只属于师院!</td>
+		   </tr>
+		  <tr>
+		    <td>电话: 151 2606 0106</td>
+		  </tr>
+		  <tr>
+		    <td>邮箱: <font face="Bradley Hand ITC">zwx@hao.com</font></td>
+		  </tr>
+		</table>
+	</td>
+	<td vAlign="top">
+		<table width="80" border="0" style="position:relative;left:20px;">
+  			<tr>
+    			<td><font color=#286426><font size="+1">支付帮助</font></font></td>
+  			</tr>
+  			<tr>
+    			<td><font size="-1"><a href="">如何付款</a></font></td>
+   			</tr>
+  			<tr>
+    			<td><font size="-1"><a href="">余额支付</a></font></td>
+   			</tr>
+ 			<tr>
+    			<td><font size="-1"><a href="">在线支付</a></font></td>
+  			</tr>
+  			<tr>
+    			<td><font size="-1"><a href="">帮助信息</a></font></td>
+  			</tr>
+		</table>	
+	</td>
+	<td vAlign="top">
+		<table width="80" border="0" style="position:relative;left:0px;">
+  			<tr align="center">
+    			<td><font color=#286426><font size="+1">用户</font>中心</font></td>
+  			</tr>
+  			<tr align="center">
+    			<td><font size="-1"><a href="retrieve.jsp">找回密码</a></font></td>
+   			</tr>
+ 			<tr align="center">
+    			<td><font size="-1"><a href="">常见问题</a></font></td>
+  			</tr>
+			 <tr align="center">
+    			<td><font size="-1"><a href="">友情链接</a></font></td>
+  			</tr>
+		</table>
+	</td>
+	<td>
+		<table border="0" style="position:relative;left:0px;">
+  			<tr>
+    			<td width="100"><font size="+1" face="华文行楷">我们的信息</font></td>
+  			</tr>
+  		</table>
+  		<table border="0" style="position:relative;left:0px;">
+  			<tr>
+    			<td width="30"><img width="30" height="35" src="WEB/images/lawico.png"></td>
+    			<td><a href="legal.jsp">法律声明</a><br>
+    			<font size="-3">如果您使用本平台服务的，您的使用行为<br>将被视为对本声明全部内容的认可。<br>
+    			<font color=#286426>2013年11月20日</font>
+    			</font>
+    			</td>
+   			</tr>
+  			<tr>
+  				<td width="30"><img width="30" height="35" src="WEB/images/ofus.png"></td>
+    			<td><a href="about.jsp">关于我们</a><br>
+    			<font size="-3">我们团队的组成，团队隶属的机构<br>等相关信息。<br>
+    			<font color=#286426>2013年11月20日</font>
+    			</font>
+   			</tr>
+		</table>	
+	</td>
+</tr>	
+</TABLE>
+<p align="center">&copy;2004 转易 Corporation. All rights reserved.</p>
+</div>

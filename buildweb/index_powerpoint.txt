@@ -1,0 +1,87 @@
+﻿<div>
+<style type="text/css"> 
+.container, .container img{width:1070px; height:350px;}
+.container img{border:0px;vertical-align:top;}
+</style>
+<script>
+new SlideTrans("idContainer", "idSlider",3, { Vertical: false }).Run();
+</script>
+<br />
+<style type="text/css">
+.container ul, .container li{list-style:none;margin:0;padding:0;}
+
+.num{ position:absolute; right:5px; bottom:45px; font:12px/1.5 tahoma, arial; height:18px;}
+.num li{
+	float: left;
+	color: #d94b01;
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 11px;
+	cursor: pointer;
+	margin-left: 3px;
+	border: 1px solid #f47500;
+	background-color: #fcf2cf;
+}
+.num li.on{
+	line-height: 18px;
+	width: 18px;
+	height: 18px;
+	font-size: 14px;
+	margin-top:-2px;
+	background-color: #ff9415;
+	font-weight: bold;
+	color:#FFF;
+}
+.img-desc /*透明文字特效处理图片*/
+{     
+	position: relative;     
+	display: block;     
+} 
+.img-desc cite /*透明的框框*/
+{     
+	background: #111;     
+	filter:alpha(opacity=55);     
+	opacity:.55;     
+	color: #fff;     
+	position: absolute;     
+	bottom: 0;     
+	left: 0;     
+	width: 1070px;     
+	padding: 10px;     
+	border-top: 1px solid #999; 
+}
+</style>
+<div class="container" id="idContainer2">
+	<ul id="idSlider2">
+		<li><div class="img-desc"><a href=""><img src="WEB/images/index_point1.jpg" alt="广告" /></a><cite>&copy;2004 转易 Corporation. All rights reserved.</cite></div></li>
+		<li><div class="img-desc"><a href=""><img src="WEB/images/index_point2.jpg" alt="广告" /></a><cite>&copy;2004 转易 Corporation. All rights reserved.</cite></div></li>
+		<li><div class="img-desc"><a href=""><img src="WEB/images/index_point3.jpg" alt="广告" /></a><cite>&copy;2004 转易 Corporation. All rights reserved.</cite></div></li>
+		<li><div class="img-desc"><a href=""><img src="WEB/images/index_point5.jpg" alt="广告" /></a><cite>&copy;2004 转易 Corporation. All rights reserved.</cite></div></li>
+	</ul>
+	<ul class="num" id="idNum">
+	</ul>
+</div>
+<br/>
+<script>
+var nums = [], timer, n = $$("idSlider2").getElementsByTagName("li").length,
+	st = new SlideTrans("idContainer2", "idSlider2", n, {
+		onStart: function(){//设置按钮样式
+			forEach(nums, function(o, i){ o.className = st.Index == i ? "on" : ""; })
+		}
+	});
+for(var i = 1; i <= n; AddNum(i++)){};
+function AddNum(i){
+	var num = $$("idNum").appendChild(document.createElement("li"));
+	num.innerHTML = i--;
+	num.onmouseover = function(){
+		timer = setTimeout(function(){ num.className = "on"; st.Auto = false; st.Run(i); }, 20);
+	}
+	num.onmouseout = function(){ clearTimeout(timer); num.className = ""; st.Auto = true; st.Run(); }
+	nums[i] = num;
+}
+st.Run();
+</script>
+</div>
